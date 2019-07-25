@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TriviaApp</string>
+
+    <string name="button_true">True</string>
+    <string name="button_false">False</string>
+
+    <string name="txt_welcome_title">TRIVIA</string>
+    <string name="txt_welcome_message">Want to test your trivia knowledge? Click start!</string>
+    <string name="button_start">Start!</string>
+    <string name="button_popup_close">On to the next</string>
+    <string name="txt_popup_status">Your status here</string>
+    <string name="button_popup_load_more">Load Next Question Set</string>
+
+</resources>
