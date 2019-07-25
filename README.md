@@ -6,7 +6,7 @@ A Yes or No Trivia game using question from OpenTriviaDB.
 
 This Project was created in Android Studio and tested on the Nexus 5X API 27 (Android 8.1.0, API 27) Emulator. Make sure you have an updated version of Android Studio installed. Find Android Studio install instructions here: https://developer.android.com/studio
 
-Either clone the repository or download a zipfile of the project. Open Android studio, then go to file and open project. Locate the project file to open. The compile sdk Version is 28 and the minimum sdk version is 21. Opening the project and playing the application in the proper emulator will start the opening activity.
+Either clone the repository or download a zipfile of the project. Open Android studio, then go to file and open project. Locate the project file to open. Make sure to sync the project with the grade files under File > Sync Project with Gradle Files.  The compile sdk Version is 28 and the minimum sdk version is 21. Opening the project and playing the application in the proper emulator will start the opening activity.
 
 ### 
 
