@@ -30,7 +30,7 @@ This Adapter class extends from View Pager. We use this to have an easy way to i
 
 See each class for more implementation details.
 
-Unused : DatabaseHelper 
+#### Unused : DatabaseHelper 
 
 Example of a SQLiteOpenHelper Database helper, examples on database creation, querying a database, etc...
 
