@@ -45,4 +45,6 @@ activity_opening - Welcome Screen
 
 fragment_question_containter - the view inflated by the SliderAdapter. Holds the Question number, difficulty, question, true/false buttons, and a question number indicator.
 
+#### Known bugs
 
+UI - Button color change doesn't update until after 2 swipes
