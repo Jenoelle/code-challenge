@@ -28,7 +28,7 @@ Responsible for keeping track of the current question, the Question set, and log
 #### SliderAdapter
 This Adapter class extends from View Pager. We use this to have an easy way to inflate identical cards to display the questions
 
-See each class for more implementation details.
+See each class for more implementation details and documentation.
 
 #### Unused : DatabaseHelper 
 
