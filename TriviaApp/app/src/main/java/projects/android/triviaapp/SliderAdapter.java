@@ -164,10 +164,14 @@ public class SliderAdapter extends PagerAdapter {
             }
         });
 
-
         container.addView(view);
 
         return view;
+    }
+
+    @Override
+    public int getItemPosition(@NonNull Object object) {
+        return POSITION_NONE;
     }
 
     @Override
