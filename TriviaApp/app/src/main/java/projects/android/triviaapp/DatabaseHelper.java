@@ -17,6 +17,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "open_trivia.db";
     private static final int DATABASE_VERSION = 1;
 
+    private static final int NUM_TABLES = 1;
+
     // Table name
     private static final String TABLE_QUESTIONS = "questions";
 
@@ -116,6 +118,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return dbInstance;
     }
 
+    @Override
+    public String toString() {
+        String result = "";
+        for(int i = 0; i < NUM_TABLES; i++){
+
+        }
+        return result;
+    }
+
     /************************ INSERTING ****************************/
 
     /**
@@ -148,18 +159,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * This function will return all of the questions in the question table
      * @return
      */
-    public List<SlideItem> getAllQuestions(){
-        List<SlideItem> questions = new ArrayList<>();
+    public List<DatabaseItem> getAllQuestions(){
+        List<DatabaseItem> questions = new ArrayList<>();
         String QUESTIONS_SELECT_QUERY = String.format("SELECT * FROM %s", TABLE_QUESTIONS);
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.rawQuery(QUESTIONS_SELECT_QUERY, null);
         try {
             if(cursor.moveToFirst()){
                 do{
-                    SlideItem question = new SlideItem(cursor.getString(cursor.getColumnIndex(KEY_QUESTION_CATEGORY)),
+                    DatabaseItem question = new DatabaseItem(cursor.getString(cursor.getColumnIndex(KEY_QUESTION_CATEGORY)),
                             cursor.getString(cursor.getColumnIndex(KEY_QUESTION_DIFFICULTY)),
                             cursor.getString(cursor.getColumnIndex(KEY_QUESTION_QUESTION)),
-                            cursor.getInt(cursor.getColumnIndex(KEY_QUESTION_DIFFICULTY)));
+                            cursor.getInt(cursor.getColumnIndex(KEY_QUESTION_CORRECT_ANSWER)));
                     questions.add(question);
                 } while(cursor.moveToNext());
             }
@@ -179,8 +190,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * @param category
      * @return
      */
-    public List<SlideItem> getQuestionsOfCategory(String category){
-        List<SlideItem> questions = new ArrayList<>();
+    public List<DatabaseItem> getQuestionsOfCategory(String category){
+        List<DatabaseItem> questions = new ArrayList<>();
         String CATEGORY_SELECT_QUERY = String.format("SELECT * FROM %s WHERE %s.%s = '%s';",
                 TABLE_QUESTIONS,
                 TABLE_QUESTIONS,
@@ -193,10 +204,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         try {
             if (cursor != null && cursor.moveToFirst()) {
                 do {
-                    SlideItem question = new SlideItem(cursor.getString(cursor.getColumnIndex(KEY_QUESTION_CATEGORY)),
+                    DatabaseItem question = new DatabaseItem(cursor.getString(cursor.getColumnIndex(KEY_QUESTION_CATEGORY)),
                             cursor.getString(cursor.getColumnIndex(KEY_QUESTION_DIFFICULTY)),
                             cursor.getString(cursor.getColumnIndex(KEY_QUESTION_QUESTION)),
-                            cursor.getInt(cursor.getColumnIndex(KEY_QUESTION_DIFFICULTY)));
+                            cursor.getInt(cursor.getColumnIndex(KEY_QUESTION_CORRECT_ANSWER)));
                     questions.add(question);
                 } while(cursor.moveToNext());
             }
@@ -217,8 +228,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * @param difficulty
      * @return
      */
-    public List<SlideItem> getQuestionsOfDifficulty(String difficulty){
-        List<SlideItem> questions = new ArrayList<>();
+    public List<DatabaseItem> getQuestionsOfDifficulty(String difficulty){
+        List<DatabaseItem> questions = new ArrayList<>();
 
         // populate
 

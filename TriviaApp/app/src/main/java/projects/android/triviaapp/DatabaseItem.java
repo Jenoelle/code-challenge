@@ -8,13 +8,13 @@ package projects.android.triviaapp;
  * the database or be extended into more specific items (Like SlideItem)
  */
 public class DatabaseItem {
-   public static int TRUE = 1;
-   public static int FALSE = 0;
+   public static final int TRUE = 1;
+   public static final int FALSE = 0;
 
-    private String category;
-    private String difficulty;
-    private String question;
-    private int correctAnswer;
+    private final String category;
+    private final String difficulty;
+    private final String question;
+    private final int correctAnswer;
 
     public DatabaseItem(String category, String difficulty, String question, int correctAnswer){
         this.category = category;

@@ -1,36 +1,48 @@
 package projects.android.triviaapp;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class DatabaseHelperTest {
 
-    @Test
-    public void onCreate() {
+    @Before
+    public void setUp() throws Exception{
+
     }
 
     @Test
-    public void addQuestion() {
+    public void testOnCreate() {
     }
 
     @Test
-    public void getAllQuestions() {
+    public void testAddQuestion() {
     }
 
     @Test
-    public void getQuestionsOfCategory() {
+    public void testGetAllQuestions() {
     }
 
     @Test
-    public void getQuestionsOfDifficulty() {
+    public void testGetQuestionsOfCategory() {
     }
 
     @Test
-    public void getQuestionsCount() {
+    public void testGetQuestionsOfDifficulty() {
     }
 
     @Test
-    public void deleteAllQuestions() {
+    public void testGetQuestionsCount() {
+    }
+
+    @Test
+    public void testDeleteAllQuestions() {
+    }
+
+    @After
+    public void tearDown() throws Exception{
+        // close the database
     }
 }
