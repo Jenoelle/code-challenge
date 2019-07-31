@@ -131,11 +131,6 @@ public class MainActivity extends AppCompatActivity implements SliderAdapter.Ite
         getJsonData.execute();
     }
 
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        //outState.putInt("latestPage", latestQuestionNumber);
-    }
 
     /**
      * Function: onQuestionAnswered()
