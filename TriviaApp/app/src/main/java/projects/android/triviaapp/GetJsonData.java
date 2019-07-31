@@ -125,8 +125,11 @@ public class GetJsonData extends AsyncTask<String, Integer, List<SlideItem>> imp
                     String category = jsonQuestion.getString("category");
                     String difficulty = jsonQuestion.getString("difficulty");
                     String questionRaw = jsonQuestion.getString("question");
-
-                    String question = questionRaw.replaceAll("&quot;", "\"").replaceAll("&#039;", "\'");
+                    
+                    String question = questionRaw.replaceAll("&quot;", "\"")
+                            .replaceAll("&#039;", "\'")
+                            .replaceAll("&lsquo;", "\'")
+                            .replaceAll("&rsquo;", "\'");
 
 
                     String correctAnswer = jsonQuestion.getString("correct_answer");

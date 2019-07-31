@@ -101,7 +101,6 @@ public class MainActivity extends AppCompatActivity implements SliderAdapter.Ite
         Log.d(TAG, "onStart: Begin");
         super.onResume();
 
-        //
         GetJsonData getJsonData = new GetJsonData(this);
         getJsonData.execute();
 
@@ -130,6 +129,12 @@ public class MainActivity extends AppCompatActivity implements SliderAdapter.Ite
         questionSet.clear();
         GetJsonData getJsonData = new GetJsonData(this);
         getJsonData.execute();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        //outState.putInt("latestPage", latestQuestionNumber);
     }
 
     /**
