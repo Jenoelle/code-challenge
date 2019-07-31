@@ -62,7 +62,6 @@ fragment_question_containter - the view inflated by the SliderAdapter. Holds the
 
 #### Future Support
 
-* Portrait and Landscape information persistence
 * Support for pulling and storing more info from database
 * Progress bar to display to user the time left to download next set of questions
 * Keep the User's score + show the results at the end
